@@ -1,0 +1,7 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+header {
+  display: flex;
+  padding: 24px;
+}
