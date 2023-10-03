@@ -1,0 +1,7 @@
+const ROOT_HEADER = document.getElementById('header')
+const ROOT_ASIDE = document.getElementById('aside')
+const ROOT_PRODUCTS_CONTAINER = document.getElementById('products-container')
+const ROOT_DELIVERY = document.getElementById('delivery')
+const ROOT_PAYMENT = document.getElementById('payment')
+const ROOT_RECIPIENT = document.getElementById('recipient')
+const ROOT_CARTS = document.getElementById('carts')

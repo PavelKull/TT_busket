@@ -1,0 +1,140 @@
+header {
+  color: white;
+  display: flex;
+
+  height: 88px;
+  padding: 0px 20px 0 20px;
+}
+.header__title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 24px;
+  hyphens: auto;
+  white-space: pre-line;
+  margin-right: 32px;
+}
+.header-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header__menu-btn {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  margin-right: 16px;
+}
+.header__menu-btn:hover {
+  border-color: white;
+}
+
+/* #header-menu-button .header-main-title {
+  width: 106px;
+  height: 48px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  margin-right: 32px;
+} */
+
+.header__form {
+  display: flex;
+  flex-grow: 1; /* Это позволит элементу `.header__form` растянуться и занять все доступное пространство. */
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 32px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 36px;
+  padding: 14px;
+  height: 48px;
+  color: white;
+  transition: background-color 0.4s ease;
+}
+.header__form:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.4s ease;
+}
+
+.header__form-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* 
+.header__form-label {
+  margin-right: 8px;
+  color: white;
+} */
+
+.header__form-input {
+  border: none;
+  background: transparent;
+  flex-grow: 1;
+}
+.header__form-search-icon {
+  opacity: 0.5;
+}
+
+.header__btn-pfofile {
+  padding: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+
+  width: 60px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  text-align: center;
+  font-size: 10px;
+  margin-right: 40px;
+  box-sizing: content-box;
+}
+
+.header__btn-pfofile p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.header__btn-pfofile-icon {
+  width: 19px;
+  height: 20px;
+  margin-bottom: 11px;
+}
+.header__btn-busket {
+  padding: 0;
+  text-align: left;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  text-align: center;
+  font-size: 10px;
+}
+.header__btn-busket p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.header__btn-busket-icon {
+  margin-bottom: 11px;
+}

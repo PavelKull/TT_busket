@@ -1,0 +1,88 @@
+@import '/css/reset.css';
+@import '/assets/fonts/fonts.css';
+
+body {
+  background: #6725a8;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.wrapper {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.main-section {
+  /* height: 1900px; */
+  background: #f6f6fa;
+  border-radius: 24px;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6fa;
+  border-radius: 16px;
+  margin: 24px;
+}
+footer {
+  height: 64px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.divider {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.103);
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox'] + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+input[type='checkbox'] + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30%;
+  background-color: transparent;
+}
+
+input[type='checkbox']:checked + label:before {
+  background-color: #cb11ab;
+  border: none;
+  background-image: url('/assets/img/checkbox.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}

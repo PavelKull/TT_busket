@@ -1,0 +1,121 @@
+.product-card {
+  color: black;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  padding-bottom: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-left-wrap {
+  display: flex;
+  align-items: flex-start;
+}
+.card-right-wrap {
+  display: flex;
+  align-items: flex-end;
+}
+.contain-check-card-img {
+  display: flex;
+  align-items: center;
+}
+.product-image {
+  width: 72px;
+  height: 96px;
+  border-radius: 8px;
+}
+.product-details {
+  flex: 1;
+  padding-left: 16px;
+  max-width: 270px;
+  text-align: left;
+}
+.product-name {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.product-description {
+  /* margin-bottom: 8px; */
+  display: flex;
+  /* flex-direction: row; */
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.product-color {
+  margin-bottom: 8px;
+  padding-right: 16px;
+}
+.product-size {
+  margin-bottom: 8px;
+}
+.card-location-info {
+  color: #9797af;
+}
+
+.quantity-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.product-quantity {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.product-exist-qty {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+
+  color: #ff3b30;
+}
+
+.card-seller-info {
+  cursor: pointer;
+  position: relative;
+  display: inline;
+  color: #9797af;
+}
+
+.card-seller-info-icon {
+  margin-left: 8px;
+}
+
+.card-seller-info-popup {
+  color: black;
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  top: 100%;
+  left: -120px;
+  width: 280px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.card-seller-info-popup h3 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.card-seller-info-popup p {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+}
+
+.card-seller-info:hover .card-seller-info-popup {
+  display: block;
+}

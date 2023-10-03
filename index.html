@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -14,81 +14,96 @@
     />
     <link
       rel="stylesheet"
-      href="/assets/normalize.css/normalize.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/assets/fonts/fonts.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/css/style.css"
+      href="/css/index.css"
     />
   </head>
   <body>
-    <header>
-      <button id="menu-button">
-        <img
-          src="/assets/img/menu_burger.svg"
-          alt="menu"
-        />
-      </button>
-      <h1>ТОВАРЫ И ТОЧКА</h1>
-      <form id="search-form">
-        <label for="search-input">
-          <img
-            src="search-icon.png"
-            alt="Поиск"
+    <main class="wrapper">
+      <div id="header"></div>
+      <section class="main-section">
+        <div class="container">
+          <h2>Корзина</h2>
+          <input
+            type="checkbox"
+            id="myCheckbox"
           />
-        </label>
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Я ищу..."
-        />
-        <button type="submit">Искать</button>
-        <button id="user-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
-            ></path>
-          </svg>
-          Профиль
-        </button>
-        <button id="user-button">
-          <div id="cart-indicator">0</div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
-            ></path>
-          </svg>
-          Корзина
-        </button>
-      </form>
-    </header>
+          <label class="myCheckbox" for="myCheckbox">Выбрать все</label>
+          <div class="divider"></div>
+          <div id="products-container">
+            <div id="carts"></div>
+          </div>
+          <div id="delivery"></div>
+          <div id="payment"></div>
+          <div id="recipient"></div>
+        </div>
+        <div id="aside"></div>
+      </section>
+    </main>
+
+    <footer>
+      <img
+        src="/assets/img/footer.svg"
+        alt=""
+      />
+    </footer>
+
+    <script src="/constants/Catalog/catalog.js"></script>
+    <script src="/constants/root.js"></script>
+    <script src="/utils/localStorageUtil.js"></script>
+
+    <script src="/components/Header/Header.js"></script>
+    <link
+      rel="stylesheet"
+      href="/components/Header/Header.css"
+    />
+
+    <script src="/components/Aside/Aside.js"></script>
+    <link
+      rel="stylesheet"
+      href="/components/Aside/Aside.css"
+    />
+
+    <script src="/components/ProductContainer/ProductContainer.js"></script>
+    <link
+      rel="stylesheet"
+      href="/components/ProductContainer/ProductContainer.css"
+    />
+    <script src="/components/Card/Card.js"></script>
+    <link
+      rel="stylesheet"
+      href="/components/Card/Card.css"
+    />
+
+    <script src="/components/Delivery/Delivery.js"></script>
+    <link
+      rel="stylesheet"
+      href="/components/Delivery/Delivery.css"
+    />
+
+    <script src="/components/Payment/Payment.js"></script>
+    <link
+      rel="stylesheet"
+      href="/components/Payment/Payment.css"
+    />
+
+    <script src="/components/Recipient/Recipient.js"></script>
+    <link
+      rel="stylesheet"
+      href="/components/Recipient/Recipient.css"
+    />
   </body>
 </html>
 
-<!-- 
-<script
-type="module"
-src="/js/main.js"
-></script>
-<script
-type="module"
-src="/js/modules/cart.js"
-></script>
-<script
-type="module"
-src="/js/modules/product.js"
-></script> -->
+
+<div class="cart-control">
+
+  <div class="quantity-control">
+    <button class="decrease-button" onclick="cart.decreaseQuantity()">-</button>
+    <p class="product-quantity">${this.quantity}</p>
+    <button class="increase-button" onclick="cart.increaseQuantity()">+</button>
+    </div>
+    <div class="product-exist-qty">${qtyText}</div>
+    <button class="remove-button" onclick="cart.removeProduct()"><img src="/assets/img/delete.svg" alt="удалить" class="like-btn"></button>
+    <button class="favorite-button" onclick="cart.toggleFavorite()"><img src="/assets/img/like.svg" alt="добавить в избранное" class="like-btn"></button></div>
+  </div>
+</div>
