@@ -1,3 +1,6 @@
+import { STORE } from '../../utils/localStorageUtil.js'
+
+const USER_DISCOUNT = 10
 const CATALOG = [
   {
     id: 1,
@@ -14,10 +17,9 @@ const CATALOG = [
     location2: 'Другой склад',
     quantityLocation1: 2,
     quantityLocation2: 0,
-    totalQty: this.quantityLocation1 + this.quantityLocation2,
-    price: 522,
+    price: 1051,
     img: '/constants/Catalog/img/tshirt.jpg',
-    discont: 0,
+    discount: 20,
   },
   {
     id: 2,
@@ -29,20 +31,19 @@ const CATALOG = [
       adress:
         '25637, Самара, улица Красная Сосна, 2, корпус 1, стр 1, помещене 2, офис 34',
     },
-    seller: 'ООО Мегапрофстиль',
     location1: 'Коледино WB',
     location2: 'Другой склад',
     quantityLocation1: 184,
     quantityLocation2: 16,
     price: 10500.235,
     img: '/constants/Catalog/img/bamber.jpg',
-    discont: 0,
+    discount: 55,
   },
   {
     id: 3,
     name: 'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell',
     seller: {
-      name: 'ООО Вайлдберриз',
+      name: 'ООО Вайлдберр из',
       ogrn: 5167746237148,
       adress:
         '129337, Москва, улица Красная Сосна, 2, корпус 1, стр 1, помещене 2, офис 34',
@@ -51,8 +52,13 @@ const CATALOG = [
     location2: 'Другой склад',
     quantityLocation1: 2,
     quantityLocation2: 0,
-    price: 247,
+    price: 950,
     img: '/constants/Catalog/img/faber-castel.jpg ',
-    discont: 0,
+    discount: 3,
   },
 ]
+
+CATALOG.forEach((product) => {
+  STORE.addItem('products', product)
+})
+STORE.setDiscount(USER_DISCOUNT)

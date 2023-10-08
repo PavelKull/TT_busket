@@ -21,6 +21,7 @@ header {
   align-items: center;
 }
 .header__menu-btn {
+  /* padding: 10px 12px 10px 12px; */
   cursor: pointer;
   width: 48px;
   height: 48px;
@@ -46,8 +47,7 @@ header {
 
 .header__form {
   display: flex;
-  flex-grow: 1; /* Это позволит элементу `.header__form` растянуться и занять все доступное пространство. */
-  align-items: center;
+  flex-grow: 1;
   justify-content: space-between;
   margin-right: 32px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -65,11 +65,6 @@ header {
 .header__form-input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-/* 
-.header__form-label {
-  margin-right: 8px;
-  color: white;
-} */
 
 .header__form-input {
   border: none;
@@ -81,13 +76,13 @@ header {
 }
 
 .header__btn-pfofile {
+  cursor: pointer;
   padding: 0;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0px;
   text-align: left;
-
   width: 60px;
   height: 56px;
   display: flex;
@@ -115,6 +110,7 @@ header {
   margin-bottom: 11px;
 }
 .header__btn-busket {
+  cursor: pointer;
   padding: 0;
   text-align: left;
   width: 56px;

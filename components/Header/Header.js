@@ -1,3 +1,4 @@
+import { ROOT_HEADER } from '../../constants/root.js'
 class Header {
   render() {
     const html = `<header>

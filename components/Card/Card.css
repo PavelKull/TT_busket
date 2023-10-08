@@ -4,21 +4,25 @@
   flex-basis: 100%;
   flex-direction: row;
   padding-bottom: 32px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .card-left-wrap {
+  flex: 1;
   display: flex;
   align-items: flex-start;
 }
 .card-right-wrap {
+  flex-shrink: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
 }
-.contain-check-card-img {
+.card-contain-check-img {
+  position: relative;
   display: flex;
   align-items: center;
 }
+
 .product-image {
   width: 72px;
   height: 96px;
@@ -58,33 +62,52 @@
 
 .quantity-control {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
+  width: 100px;
+  height: 44px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px 2px;
 }
 
 .product-quantity {
+  align-items: center;
   margin: 0 10px;
   font-size: 18px;
 }
+.quantity-control button {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
 
+.card-hidden-btns {
+  display: none;
+}
+
+.product-card:hover .card-hidden-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  margin-right: 8px;
+}
 .product-exist-qty {
   margin-top: 8px;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
   text-align: left;
-
-  color: #ff3b30;
+  color: var(--red);
 }
 
 .card-seller-info {
   cursor: pointer;
   position: relative;
   display: inline;
-  color: #9797af;
+  color: var(--grey-text-color);
 }
 
 .card-seller-info-icon {
@@ -95,12 +118,12 @@
   color: black;
   display: none;
   position: absolute;
-  border-radius: 10px;
+  border-radius: 8px;
   top: 100%;
   left: -120px;
   width: 280px;
   background-color: white;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   padding: 10px;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
 }
@@ -118,4 +141,98 @@
 
 .card-seller-info:hover .card-seller-info-popup {
   display: block;
+}
+
+.card-control {
+  margin-right: 16px;
+}
+.card-control button {
+  cursor: pointer;
+}
+
+.card-prices {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  text-align: right;
+  width: 110px;
+  text-align: right;
+}
+.product-price-discount {
+  position: relative;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--grey-text-color);
+}
+.product-price-discount span {
+  text-decoration: line-through;
+  border-bottom: 1px dashed;
+}
+
+.card-price-popup {
+  width: 240px;
+  height: 64px;
+  color: black;
+  display: none;
+  border-radius: 8px;
+  top: 130%;
+  left: -120px;
+  background-color: white;
+  /* border: 1px solid #ccc; */
+  padding: 11px 16px 13px 16px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+.card-price-popup-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.card-price-popup-wrap .column {
+  text-align: left;
+}
+.card-price-popup-wrap .column p {
+  margin-bottom: 8px;
+  color: var(--grey-text-color);
+}
+.card-price-popup-wrap .column-black {
+  text-align: right;
+}
+.card-price-popup-wrap .column-black p {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.product-price-discount:hover .card-price-popup {
+  display: block;
+}
+.remove-button,
+.favorite-button {
+  margin-right: 8px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.remove-button:hover svg path {
+  fill: var(--red);
+}
+
+.favorite-button:hover svg path {
+  fill: var(--elements-color);
+}
+.min,
+.max {
+  color: var(--grey-text-color);
+}
+
+.gray-content * {
+  color: gray !important;
+  filter: grayscale(100%) !important;
+}
+.card-prices-default {
+  width: 134px;
 }
